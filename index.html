@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- TradingView Widget -->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body>
     <header>
@@ -26,38 +28,43 @@
         <section id="inicio" class="stream-section">
             <h2>Transmisión en Vivo</h2>
             <div class="kick-embed">
-             <iframe src="https://kick.com/stream-dynamo/embed" frameborder="0" allowfullscreen></iframe>
-                        frameborder="0" 
-                        allowfullscreen>
-                </iframe>
+                <iframe src="https://kick.com/stream-dynamo/embed" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
         <section id="deportes" class="widget-section">
             <h2>Noticias Deportivas</h2>
             <div id="sports-widget" class="widget">
-                <!-- Datos cargados vía API (ej. ESPN o NewsAPI) -->
-                <p>Cargando resultados...</p>
+                <!-- Contenido cargado por script.js -->
+                <div class="news-item">
+                    <h3>⚽ Argentina gana la Copa América 2024</h3>
+                    <p>La selección liderada por Messi consigue su tercer título consecutivo.</p>
+                </div>
+                <div class="news-item">
+                    <h3>🏀 NBA: Denver Nuggets campeones</h3>
+                    <p>Nikola Jokić es elegido MVP de las finales.</p>
+                </div>
             </div>
         </section>
 
         <section id="finanzas" class="widget-section">
+            <h2>Datos Financieros</h2>
             <div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-    "symbols": [
-      {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
-      {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
-      {"description": "USD/ARS", "proName": "FX_IDC:USDARS"}
-    ],
-    "colorTheme": "dark",
-    "isTransparent": true,
-    "showSymbolLogo": true,
-    "locale": "es"
-  }
-  </script>
-</div>
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols": [
+                        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+                        {"description": "USD/ARS", "proName": "FX_IDC:USDARS"}
+                    ],
+                    "colorTheme": "dark",
+                    "isTransparent": true,
+                    "showSymbolLogo": true,
+                    "locale": "es"
+                }
+                </script>
+            </div>
         </section>
 
         <section id="busqueda" class="search-section">
