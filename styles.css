@@ -63,3 +63,16 @@ footer {
     margin: 0 0.5rem;
     font-size: 1.5rem;
 }
+/* Diseño para móviles */
+@media (max-width: 768px) {
+  .kick-embed iframe {
+    height: 250px !important;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .widget {
+    padding: 10px;
+  }
+}
