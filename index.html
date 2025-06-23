@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYNAMO RADIO STREAM | Transmisión en Vivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DYNAMO RADIO STREAM</h1>
+            <p>Música, Deportes y Noticias en Vivo</p>
+        </div>
+        <nav>
+            <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#radio"><i class="fas fa-broadcast-tower"></i> Radio</a>
+            <a href="#deportes"><i class="fas fa-running"></i> Deportes</a>
+            <a href="#finanzas"><i class="fas fa-chart-line"></i> Finanzas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="stream-section">
+            <h2>Transmisión en Vivo</h2>
+            <div class="kick-embed">
+                <!-- Reemplaza con el embed de Kick -->
+                <iframe src="https://player.kick.com/TU_CANAL_DE_KICK?autoplay=true" 
+                        frameborder="0" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="deportes" class="widget-section">
+            <h2>Noticias Deportivas</h2>
+            <div id="sports-widget" class="widget">
+                <!-- Datos cargados vía API (ej. ESPN o NewsAPI) -->
+                <p>Cargando resultados...</p>
+            </div>
+        </section>
+
+        <section id="finanzas" class="widget-section">
+            <h2>Datos Financieros</h2>
+            <div id="finance-widget" class="widget">
+                <!-- Widget de TradingView o Alpha Vantage -->
+                <div class="tradingview-widget-container">
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
+                    {
+                        "symbols": [
+                            { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" },
+                            { "proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100" },
+                            { "description": "USD/ARS", "proName": "FX_IDC:USDARS" }
+                        ],
+                        "colorTheme": "dark"
+                    }
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section id="busqueda" class="search-section">
+            <h2>Búsqueda Web</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Buscar en la web...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div id="search-results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DYNAMO RADIO STREAM. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-kick"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
