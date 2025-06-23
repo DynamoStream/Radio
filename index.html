@@ -26,8 +26,7 @@
         <section id="inicio" class="stream-section">
             <h2>Transmisión en Vivo</h2>
             <div class="kick-embed">
-                <!-- Reemplaza con el embed de Kick -->
-                <iframe src="https://kick.com/stream-dynamo?autoplay=true" 
+             <iframe src="https://kick.com/stream-dynamo/embed" frameborder="0" allowfullscreen></iframe>
                         frameborder="0" 
                         allowfullscreen>
                 </iframe>
@@ -48,12 +47,14 @@
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
   {
     "symbols": [
-      { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" },
-      { "proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100" },
-      { "description": "USD/ARS", "proName": "FX_IDC:USDARS" }
+      {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+      {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+      {"description": "USD/ARS", "proName": "FX_IDC:USDARS"}
     ],
     "colorTheme": "dark",
-    "isTransparent": true
+    "isTransparent": true,
+    "showSymbolLogo": true,
+    "locale": "es"
   }
   </script>
 </div>
